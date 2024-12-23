@@ -45,17 +45,27 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+![Prompt1](./images/Prompt1.png)
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+![Prompt2](./images/Prompt2.png)
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
 
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
-```
-Your answer...
-```
+Type 1 architecture has creation date in Address table and hence if a customer address is changed, it will create another address id tied to the customer id with the new address. This retains the past and current values assigned to addresses.
+
+![Prompt3 Part1](./images/Prompt3-part1.png)
+
+Type 2 architecture on the other hand has creation date and update date separately and hence it would overwrite the address in case the address is changed.
+
+![Prompt3 Part2](./images/Prompt3-part2.png)
+
+
 
 ***
 
